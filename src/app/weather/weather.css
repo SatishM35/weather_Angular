@@ -9,6 +9,7 @@
 
 .container {
     background: #171717;
+    opacity: 0.6;
     color: #fff;
     padding: 2rem;
     width: 40%;

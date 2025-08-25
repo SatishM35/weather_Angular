@@ -24,6 +24,7 @@ export class Weather implements OnInit{
   }
 
     getWeather(): void {
+      
     this.loading = true;
     this.error = '';
     this.Service.getWeatherData(this.cityName).subscribe({
