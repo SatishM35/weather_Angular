@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+.body{
+    background-image: url("back1.jpg");
+    background-position: center; /* Center the image */
+    
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+    color: aliceblue;
+    /* text-align: center;*/
+   
+ 
+}
