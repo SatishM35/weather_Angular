@@ -17,7 +17,7 @@
         </div>
         <div class="weather__body">
             <h1 class="weather__city">{{cityName}}</h1>
-            <div class="weather__datetime"></div>
+            <div class="weather__datetime">{{cityName}}</div>
             <div class="weather__forecast"></div>
             <div class="weather__icon"></div>
             <p class="weather__temperature"></p>
@@ -27,6 +27,7 @@
             </div>
         </div>
 
+        
         <div class="weather__info" *ngIf="weatherData">
             <div class="weather__card">
                 <i class="fa-solid fa-temperature-full"></i>
