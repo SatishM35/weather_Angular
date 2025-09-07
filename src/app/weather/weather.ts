@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class Weather implements OnInit{
 
+  
   cityName: string = 'Mumbai'; // Default city
   weatherData: any;
   loading: boolean = false;
@@ -23,6 +24,7 @@ export class Weather implements OnInit{
     this.getWeather();
   }
 
+  
     getWeather(): void {
       
     this.loading = true;

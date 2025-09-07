@@ -6,9 +6,9 @@
             <form class="weather__search">
                 <input type="text" (ngModel)="cityName" placeholder="Search for a city..." class="weather__searchform">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <button (click)="getWeather()">Get Weather</button>
+                <button (click)="getWeather()">Get Weather</button> 
             </form> 
-             <div *ngIf="loading">Loading weather data...</div>
+             <div *ngIf="loading">Loading weather data...</div> 
              <div *ngIf="error" class="error-message">{{ error }}</div>
             <div class="weather__units">
                 <span class="weather_unit_celsius">°C</span>
@@ -18,7 +18,7 @@
         <div class="weather__body">
             <h1 class="weather__city">{{cityName}}</h1>
             <div class="weather__datetime">{{cityName}}</div>
-            <div class="weather__forecast"></div>
+            <div class="weather__forecast">{{cityName}}</div>
             <div class="weather__icon"></div>
             <p class="weather__temperature"></p>
             <div class="weather__minmax">
@@ -26,6 +26,7 @@
                 <p>Max: 16176</p>
             </div>
         </div>
+
         <div class="weather__info" *ngIf="weatherData">
             <div class="weather__card">
                 <i class="fa-solid fa-temperature-full"></i>

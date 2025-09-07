@@ -12,6 +12,7 @@ export class Service {
   private apiKey = '058910a23841670548d7dd08231fc114'; // Replace with your actual API key
   private baseUrl = 'https://api.openweathermap.org/data/3.0/weather'; // Example using OpenWeatherMap
 
+  
   constructor(private http: HttpClient) {}
 
   getWeatherData(city: string): Observable<any> {
