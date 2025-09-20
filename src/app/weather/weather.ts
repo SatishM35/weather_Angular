@@ -25,7 +25,6 @@ export class Weather implements OnInit{
     this.getWeather();
   }
 
-  
     getWeather(): void {
       
     this.loading = true;
