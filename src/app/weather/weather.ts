@@ -14,6 +14,7 @@ export class Weather implements OnInit{
 
   
   cityName: string = 'Mumbai'; // Default city
+  todayDate: Date = new Date();
   weatherData: any;
   loading: boolean = false;
   error: string = '';
