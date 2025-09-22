@@ -12,7 +12,6 @@ import { CommonModule } from '@angular/common';
 })
 export class Weather implements OnInit{
 
-  
   cityName: string = 'Mumbai'; // Default city
   todayDate: Date = new Date();
   weatherData: any;
@@ -24,9 +23,7 @@ export class Weather implements OnInit{
   ngOnInit(): void {
     this.getWeather();
   }
-
     getWeather(): void {
-      
     this.loading = true;
     this.error = '';
     this.Service.getWeatherData(this.cityName).subscribe({
@@ -42,6 +39,6 @@ export class Weather implements OnInit{
     });
   }
 
-  }
+}
 
   

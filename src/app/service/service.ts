@@ -8,8 +8,10 @@ import { Observable } from 'rxjs';
 
 export class Service {
   
+  celsiusValue: any = " ";
+  fahrenheitValue: any = " ";
 
-  /*** [API] GeoDB Cities  ***/
+/*** [API] GeoDB Cities  ***/
 
   private geo_cities_url = 'https://wft-geo-db.p.rapidapi.com/v1/geo/cities';
   private geo_cities_key = '002e9db744msh8b3fcde43bfdab3p10e298jsnebf5c3dabb4d';
@@ -22,8 +24,8 @@ export class Service {
   constructor(private http: HttpClient) {}
 
   getWeatherData(city: string): Observable<any> {
-    const url = `${this.baseUrl}?q=${city}&appid=${this.apiKey}`; // Add units for Celsius
-    const url1 = `https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=058910a23841670548d7dd08231fc114`;
+    const url = `${this.baseUrl}?q=${city}&appid=${this.apiKey}`; // Add units for Celsius - &units=metric
+    const url1 = `https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=058910a23841670548d7dd08231fc114&units=metric`;
     return this.http.get(url1);
   }
 
@@ -31,6 +33,18 @@ export class Service {
     //const url2 = `${this.geo_cities_url}?q=${}&appid=${this.geo_cities_key}`;
     //const url3 = `https://wft-geo-db.p.rapidapi.com/v1/geo/cities?q=mumbai&appid=002e9db744msh8b3fcde43bfdab3p10e298jsnebf5c3dabb4d`;
     //return this.http.get(url3);
+  }
+
+
+   // Convert Celsius to Fahrenheit
+  convertToFahrenheit(): void {
+    // Use 9.0 and 5.0 for floating-point division
+    this.fahrenheitValue = (this.celsiusValue * 9.0 / 5.0) + 32;
+  }
+
+  // Convert Fahrenheit to Celsius
+  convertToCelsius(): void {
+    this.celsiusValue = (this.fahrenheitValue - 32) * 5.0 / 9.0;
   }
 
 }
