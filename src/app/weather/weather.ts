@@ -41,4 +41,6 @@ export class Weather implements OnInit{
 
 }
 
+   const sunriseTimestampMs = weatherData.current.sunrise * 1000;
+
   
