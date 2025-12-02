@@ -47,6 +47,6 @@ export class Service {
     this.celsiusValue = (this.fahrenheitValue - 32) * 5.0 / 9.0;
   }
 
-     const sunriseTimestampMs = weatherData.current.sunrise * 1000;
+    //const sunriseTimestampMs = weatherData.current.sunrise * 1000;
 
 }
